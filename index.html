@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quesadillas Sra. Ascencio · Antojitos mexicanos kosher</title>
+<meta name="description" content="Quesadillas, sopes, enchiladas, tostadas y tamales kosher lácteos en Polanco, Tecamachalco e Interlomas. Pedidos a domicilio y eventos por WhatsApp.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%2219%22 fill=%22%23b4532a%22/%3E%3Cpath d=%22M8 24a12 12 0 0 1 24 0Z%22 fill=%22%23f0b43c%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --terra:#b4532a; --terra-h:#963f1c; --terra-c:#f8e6dc;
+    --maiz:#f0b43c; --maiz-c:#fdf1d6;
+    --verde:#2f6a4a; --verde-c:#e2efe6;
+    --crema:#fbf5ea; --blanco:#fff;
+    --tinta:#2b1d15; --tinta-2:#6a5446; --linea:#eadccb;
+    --wa:#1fa855; --wa-h:#178a45;
+    --r:18px; --sombra:0 1px 2px rgba(43,29,21,.05), 0 14px 34px -16px rgba(43,29,21,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--crema);color:var(--tinta);-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+  a{color:inherit}
+  h1,h2,h3,.logo{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em}
+  .cont{max-width:1160px;margin:0 auto;padding:0 20px}
+  svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .tejido{height:6px;background:repeating-linear-gradient(90deg,var(--terra) 0 26px,var(--maiz) 26px 38px,var(--verde) 38px 50px,var(--crema) 50px 56px)}
+
+  .aviso-demo{background:var(--tinta);color:#f4e9dc;font-size:13px;text-align:center;padding:8px 16px}
+  .aviso-demo a{color:var(--maiz);font-weight:600;text-decoration:none}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(251,245,234,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+  .barra{display:flex;align-items:center;gap:24px;height:70px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;line-height:1}
+  .logo .marca{width:38px;height:38px;flex:none}
+  .logo .txt{display:flex;flex-direction:column}
+  .logo small{font:600 11px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);margin-bottom:3px}
+  .logo b{font-size:23px;font-weight:700;color:var(--terra)}
+  nav.menu{display:flex;gap:26px;margin-left:auto;font-size:15px;font-weight:500}
+  nav.menu a{text-decoration:none;color:var(--tinta-2)} nav.menu a:hover{color:var(--terra)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;font:600 15px/1 Inter,sans-serif;text-decoration:none;border-radius:999px;padding:14px 22px;transition:.15s}
+  .btn-wa{background:var(--wa);color:#fff} .btn-wa:hover{background:var(--wa-h)}
+  .btn-terra{background:var(--terra);color:#fff} .btn-terra:hover{background:var(--terra-h)}
+  .btn-claro{background:var(--blanco);color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--linea)} .btn-claro:hover{box-shadow:inset 0 0 0 1.5px var(--terra);color:var(--terra)}
+  .barra .btn{padding:11px 18px;font-size:14px}
+
+  .hero{position:relative;overflow:hidden}
+  .hero-foto{position:absolute;inset:0;background:url(hero.jpg) center right/cover no-repeat}
+  .hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--crema) 0%,rgba(251,245,234,.95) 34%,rgba(251,245,234,.55) 56%,rgba(251,245,234,0) 76%)}
+  .hero .cont{position:relative;padding-top:86px;padding-bottom:96px}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:var(--blanco);border:1px solid var(--linea);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--verde)}
+  .hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.04;font-weight:700;max-width:640px;margin:20px 0 18px}
+  .hero h1 em{font-style:italic;color:var(--terra)}
+  .hero p.sub{font-size:18px;color:var(--tinta-2);max-width:520px}
+  .hero .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .sellos{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:14px;font-weight:600;color:var(--tinta-2)}
+  .sellos span{display:inline-flex;align-items:center;gap:7px}
+  .sellos svg{color:var(--verde)}
+
+  section{padding:84px 0}
+  .titulo{max-width:640px;margin-bottom:40px}
+  .titulo .eti{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--terra)}
+  .titulo h2{font-size:clamp(30px,3.6vw,42px);line-height:1.1;margin:10px 0 12px}
+  .titulo p{color:var(--tinta-2);font-size:17px}
+
+  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cat{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px;transition:.18s}
+  .cat:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+  .cat .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center}
+  .cat .ico svg{width:26px;height:26px}
+  .cat h3{font-size:22px}
+  .cat p{color:var(--tinta-2);font-size:15px;flex:1}
+  .cat a{font-weight:600;font-size:14px;color:var(--terra);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .c1 .ico{background:var(--maiz-c);color:#9a6a00} .c2 .ico{background:var(--terra-c);color:var(--terra)} .c3 .ico{background:var(--verde-c);color:var(--verde)}
+  .nota-menu{margin-top:22px;font-size:14px;color:var(--tinta-2);display:flex;align-items:center;gap:8px}
+
+  .bloque{background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .k-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}
+  .lista-k{list-style:none;display:grid;gap:16px;margin-top:8px}
+  .lista-k li{display:flex;gap:14px}
+  .lista-k .n{width:34px;height:34px;flex:none;border-radius:50%;background:var(--terra-c);color:var(--terra);display:grid;place-items:center;font:700 15px Fraunces,serif}
+  .lista-k b{display:block;font-size:16px}
+  .lista-k span{color:var(--tinta-2);font-size:15px}
+
+  .pedido{background:var(--crema);border:1px solid var(--linea);border-radius:22px;padding:26px;box-shadow:var(--sombra)}
+  .pedido h3{font-size:23px;margin-bottom:4px}
+  .pedido .nota{font-size:13px;color:var(--tinta-2);margin-bottom:18px}
+  .modo{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--blanco);border:1px solid var(--linea);border-radius:999px;padding:5px;margin-bottom:14px}
+  .modo label{position:relative;cursor:pointer}
+  .modo input{position:absolute;opacity:0;pointer-events:none}
+  .modo span{display:flex;align-items:center;justify-content:center;gap:8px;height:40px;border-radius:999px;font-weight:600;font-size:14px;color:var(--tinta-2)}
+  .modo input:checked+span{background:var(--terra);color:#fff}
+  .modo input:focus-visible+span{outline:2px solid var(--terra);outline-offset:2px}
+  .sub-t{font:700 12px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-2);margin:16px 0 4px}
+  .fila{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--linea)}
+  .fila:last-of-type{border-bottom:0}
+  .fila .nom{flex:1;font-weight:600;font-size:15px}
+  .fila .nom small{display:block;color:var(--tinta-2);font-weight:400;font-size:13px}
+  .paso{display:flex;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:999px}
+  .paso button{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;font-size:18px;font-weight:600;color:var(--terra)}
+  .paso button:focus-visible{outline:2px solid var(--terra);border-radius:50%}
+  .paso output{min-width:30px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+  .campos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .campos label{font-size:13px;font-weight:600;color:var(--tinta-2);display:grid;gap:6px;min-width:0}
+  .campos .ancho{grid-column:1/-1}
+  .campos input,.campos select{font:15px Inter,sans-serif;padding:11px 12px;border-radius:12px;border:1px solid var(--linea);background:var(--blanco);color:var(--tinta);width:100%;min-width:0;min-height:44px}
+  .campos input:focus,.campos select:focus{outline:2px solid var(--terra);border-color:transparent}
+  [hidden]{display:none!important}
+  .resumen{font-size:14px;color:var(--tinta-2);margin:16px 0 14px;min-height:21px}
+  .pedido .btn{width:100%}
+  .pedido .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+
+  .eventos{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .ev-foto{border-radius:24px;background:linear-gradient(150deg,var(--verde),#1f4c34);color:#f6efe2;padding:40px;position:relative;overflow:hidden}
+  .ev-foto::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:var(--maiz);opacity:.18}
+  .ev-foto .eti{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--maiz)}
+  .ev-foto h2{font-size:clamp(30px,3.6vw,42px);line-height:1.1;margin:10px 0 14px}
+  .ev-foto p{opacity:.92;font-size:17px;max-width:460px}
+  .ev-foto ul{list-style:none;margin-top:22px;display:grid;gap:10px;font-weight:500}
+  .ev-foto li{display:flex;gap:10px;align-items:center}
+  .ev-foto li svg{color:var(--maiz)}
+
+  .sucs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .suc{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+  .suc .mapa{height:220px;background:var(--verde-c)}
+  .suc .mapa iframe{width:100%;height:100%;border:0;display:block}
+  .suc .info{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .suc h3{font-size:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .suc .nuevo{font:700 11px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;background:var(--maiz-c);color:#8a5d00;border-radius:999px;padding:4px 10px}
+  .dato{display:flex;gap:12px;font-size:15px}
+  .dato svg{color:var(--terra);margin-top:2px}
+  .dato span{color:var(--tinta-2)}
+  .suc .acc{display:flex;gap:10px;margin-top:auto;padding-top:6px;flex-wrap:wrap}
+  .suc .acc .btn{padding:11px 16px;font-size:14px;flex:1}
+
+  .cta{background:linear-gradient(120deg,var(--terra),#c96a36 50%,var(--maiz));color:#fff;border-radius:28px;padding:54px 40px;text-align:center}
+  .cta h2{font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin-bottom:10px}
+  .cta p{opacity:.95;font-size:17px;margin-bottom:26px}
+  .cta .btn{background:#fff;color:var(--terra)} .cta .btn:hover{background:var(--tinta);color:#fff}
+
+  footer{padding:40px 0 110px;color:var(--tinta-2);font-size:14px}
+  .pie{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;border-top:1px solid var(--linea);padding-top:26px}
+  .pie a{text-decoration:none;font-weight:600;color:var(--terra)}
+
+  .flota{position:fixed;right:20px;bottom:20px;z-index:30;box-shadow:0 10px 26px -8px rgba(31,168,85,.6)}
+
+  @media (max-width:920px){
+    nav.menu{display:none}
+    .barra .btn{margin-left:auto}
+    .cats{grid-template-columns:1fr 1fr}
+    .sucs{grid-template-columns:1fr}
+    .suc{display:grid;grid-template-columns:1fr 1fr}
+    .suc .mapa{height:auto;min-height:240px}
+    .k-grid,.eventos{grid-template-columns:1fr}
+  }
+  @media (max-width:620px){
+    .cont{padding:0 16px}
+    .barra{height:62px;gap:12px}
+    .logo b{font-size:20px} .logo small{font-size:10px} .logo .marca{width:32px;height:32px}
+    .barra .btn span{display:none}
+    .barra .btn{padding:11px}
+    .hero-foto{background-position:72% center}
+    .hero-foto::after{background:linear-gradient(180deg,rgba(251,245,234,.94) 0%,rgba(251,245,234,.88) 60%,rgba(251,245,234,.72) 100%)}
+    .hero .cont{padding-top:52px;padding-bottom:60px}
+    .hero p.sub{font-size:16px}
+    .hero .acciones .btn{flex:1 1 100%}
+    section{padding:60px 0}
+    .cats{grid-template-columns:1fr}
+    .suc{display:flex}
+    .suc .mapa{height:200px;min-height:0}
+    .campos{grid-template-columns:1fr}
+    .pedido{padding:20px}
+    .ev-foto{padding:28px 22px}
+    .cta{padding:40px 22px;border-radius:22px}
+    .flota span{display:none}
+    .flota{padding:15px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.08c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.09-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.23.54.77 1.88.84 2.02.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-luna" viewBox="0 0 24 24"><path d="M3 15a9 9 0 0 1 18 0Z"/><path d="M7 15c1-2 2.5-3 5-3s4 1 5 3"/></symbol>
+  <symbol id="i-circ" viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="9" ry="5"/><path d="M3 13v1c0 2.8 4 5 9 5s9-2.2 9-5v-1"/><circle cx="9" cy="12" r=".6"/><circle cx="14" cy="13" r=".6"/></symbol>
+  <symbol id="i-rollo" viewBox="0 0 24 24"><path d="M4 8h16v8H4z"/><path d="M8 8v8M12 8v8M16 8v8"/></symbol>
+  <symbol id="i-tostada" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 10h.01M15 9h.01M12 14h.01M9 15h.01M16 14h.01"/></symbol>
+  <symbol id="i-tamal" viewBox="0 0 24 24"><path d="M12 3c4 3 6 7 6 11a6 6 0 0 1-12 0c0-4 2-8 6-11Z"/><path d="M12 7v13"/></symbol>
+  <symbol id="i-mas" viewBox="0 0 24 24"><path d="M5 18 19 6M8 20 20 9"/><path d="M4 15l4 4"/></symbol>
+  <symbol id="i-moto" viewBox="0 0 24 24"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17h7l3-6h-4M16 11l2 6M9 11h3"/></symbol>
+  <symbol id="i-tienda" viewBox="0 0 24 24"><path d="M3 9 5 4h14l2 5M4 9v11h16V9M3 9h18"/><path d="M9 20v-6h6v6"/></symbol>
+  <symbol id="i-fiesta" viewBox="0 0 24 24"><path d="M4 20 9 7l8 8Z"/><path d="M14 4h.01M19 9h.01M17 3l-1 3M21 7l-3 1"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-gente" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+</svg>
+
+<div class="aviso-demo">Demostración preparada para Quesadillas Sra. Ascencio por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a>. Los datos son de ejemplo.</div>
+
+<header>
+  <div class="cont barra">
+    <a class="logo" href="#inicio" aria-label="Quesadillas Sra. Ascencio, inicio">
+      <svg class="marca" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#b4532a"/><path d="M8 24a12 12 0 0 1 24 0Z" fill="#f0b43c"/><path d="M11.5 24c1.6-3.6 4.5-5.4 8.5-5.4s6.9 1.8 8.5 5.4" fill="none" stroke="#fdf1d6" stroke-width="1.8" stroke-linecap="round"/><path d="M8 27.5h24" stroke="#2f6a4a" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span class="txt"><small>Quesadillas</small><b>Sra. Ascencio</b></span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#menu">Menú</a>
+      <a href="#domicilio">A domicilio</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#sucursales">Sucursales</a>
+    </nav>
+    <a class="btn btn-wa" id="wa-barra" href="#" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp"><svg class="i"><use href="#i-wa"/></svg><span>Pedir por WhatsApp</span></a>
+  </div>
+</header>
+<div class="tejido" aria-hidden="true"></div>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="hero-foto" role="img" aria-label="Quesadillas de maíz con queso fundido sobre un comal, con salsas verde y roja"></div>
+    <div class="cont">
+      <span class="chip"><svg class="i" style="width:16px;height:16px"><use href="#i-check"/></svg> Kosher · Supervisión KMD · Lácteo</span>
+      <h1>Antojitos mexicanos <em>kosher</em>, con la sazón de siempre</h1>
+      <p class="sub">Quesadillas, sopes, enchiladas, tostadas y tamales en Polanco, Tecamachalco e Interlomas. Pide a domicilio o para tu evento por WhatsApp.</p>
+      <div class="acciones">
+        <a class="btn btn-terra" href="#domicilio">Arma tu pedido <svg class="i"><use href="#i-flecha"/></svg></a>
+        <a class="btn btn-wa" id="wa-hero" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg> Pedir por WhatsApp</a>
+      </div>
+      <div class="sellos">
+        <span><svg class="i"><use href="#i-check"/></svg> Kosher lácteo</span>
+        <span><svg class="i"><use href="#i-check"/></svg> 3 sucursales</span>
+        <span><svg class="i"><use href="#i-check"/></svg> Servicio a domicilio</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="menu">
+    <div class="cont">
+      <div class="titulo">
+        <div class="eti">Menú</div>
+        <h2>Los antojitos de la casa</h2>
+        <p>Cocina mexicana kosher láctea, con el mismo menú que nuestros clientes conocen desde hace años.</p>
+      </div>
+      <div class="cats">
+        <article class="cat c1">
+          <div class="ico"><svg class="i"><use href="#i-luna"/></svg></div>
+          <h3>Quesadillas</h3>
+          <p>Las de siempre: fritas, bañadas en crema y salsa roja y verde.</p>
+          <a href="#" data-pedir="Quesadillas">Pregunta por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c2">
+          <div class="ico"><svg class="i"><use href="#i-circ"/></svg></div>
+          <h3>Sopes</h3>
+          <p>Uno de los antojitos que más se piden en la casa.</p>
+          <a href="#" data-pedir="Sopes">Pregunta por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c3">
+          <div class="ico"><svg class="i"><use href="#i-rollo"/></svg></div>
+          <h3>Enchiladas</h3>
+          <p>Enchiladas con la sazón de la casa. Pregúntanos por las variedades.</p>
+          <a href="#" data-pedir="Enchiladas">Pregunta por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c2">
+          <div class="ico"><svg class="i"><use href="#i-tostada"/></svg></div>
+          <h3>Tostadas</h3>
+          <p>Crujientes, para comer aquí, llevar o pedir a domicilio.</p>
+          <a href="#" data-pedir="Tostadas">Pregunta por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c3">
+          <div class="ico"><svg class="i"><use href="#i-tamal"/></svg></div>
+          <h3>Tamales</h3>
+          <p>Para la mesa de la casa o para tu evento.</p>
+          <a href="#" data-pedir="Tamales">Pregunta por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c1">
+          <div class="ico"><svg class="i"><use href="#i-mas"/></svg></div>
+          <h3>Más antojitos</h3>
+          <p>Flautas, esquites y otros antojitos mexicanos.</p>
+          <a href="#" data-pedir="Antojitos">Pregunta por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+      </div>
+      <p class="nota-menu"><svg class="i" style="width:18px;height:18px;color:var(--verde)"><use href="#i-wa"/></svg> Precios y disponibilidad: pregunta por WhatsApp.</p>
+    </div>
+  </section>
+
+  <section id="domicilio" class="bloque">
+    <div class="cont k-grid">
+      <div>
+        <div class="titulo">
+          <div class="eti">A domicilio</div>
+          <h2>Arma tu pedido a domicilio</h2>
+          <p>Elige tus antojitos aquí y mándalo por WhatsApp. Nos llega ya escrito y te confirmamos el total y la hora de entrega.</p>
+        </div>
+        <ul class="lista-k">
+          <li><div class="n">1</div><div><b>Elige platillos y cantidades</b><span>Aquí mismo en la página, en un minuto.</span></div></li>
+          <li><div class="n">2</div><div><b>A domicilio o para recoger</b><span>Escoge la sucursal y para cuándo lo quieres.</span></div></li>
+          <li><div class="n">3</div><div><b>Envíalo por WhatsApp</b><span>Nos llega ya escrito, sin errores.</span></div></li>
+        </ul>
+      </div>
+
+      <form class="pedido" id="pedido" onsubmit="return false">
+        <h3>Tu pedido</h3>
+        <p class="nota">Platillos de ejemplo. Con su menú real ponemos sus platillos, fotos y precios.</p>
+        <div class="modo" role="radiogroup" aria-label="Cómo lo quieres">
+          <label><input type="radio" name="modo" value="domicilio" checked><span><svg class="i" style="width:18px;height:18px"><use href="#i-moto"/></svg> A domicilio</span></label>
+          <label><input type="radio" name="modo" value="recoger"><span><svg class="i" style="width:18px;height:18px"><use href="#i-tienda"/></svg> Recoger</span></label>
+        </div>
+        <div class="campos">
+          <label>Sucursal<select id="sucursal"><option>Polanco</option><option>Tecamachalco</option><option>Interlomas</option></select></label>
+          <label>Para cuándo<select id="cuando"><option value="lo antes posible">Lo antes posible</option><option value="hoy más tarde">Hoy, más tarde</option><option value="mañana">Mañana</option></select></label>
+          <label class="ancho" id="l-dir">Dirección de entrega <input id="direccion" autocomplete="street-address" placeholder="Calle, número y colonia"></label>
+        </div>
+        <div class="sub-t">Platillos</div>
+        <div id="filas"></div>
+        <p class="resumen" id="resumen" aria-live="polite">Agrega al menos un platillo.</p>
+        <a class="btn btn-wa" id="enviar" href="#" target="_blank" rel="noopener" aria-disabled="true"><svg class="i"><use href="#i-wa"/></svg> Enviar pedido por WhatsApp</a>
+      </form>
+    </div>
+  </section>
+
+  <section id="eventos">
+    <div class="cont eventos">
+      <div class="ev-foto">
+        <div class="eti">Ascencio Eventos</div>
+        <h2>Antojitos mexicanos kosher para tu evento</h2>
+        <p>Llevamos la sazón de la casa a tu fiesta, reunión o celebración. Cuéntanos qué tienes en mente y te mandamos opciones.</p>
+        <ul>
+          <li><svg class="i"><use href="#i-check"/></svg> Kosher lácteo, supervisión KMD</li>
+          <li><svg class="i"><use href="#i-check"/></svg> Para grupos chicos y grandes</li>
+          <li><svg class="i"><use href="#i-check"/></svg> Cotización por WhatsApp</li>
+        </ul>
+      </div>
+      <form class="pedido" id="evento" onsubmit="return false">
+        <h3>Cotiza tu evento</h3>
+        <p class="nota">Llena tres datos y se arma tu mensaje.</p>
+        <div class="campos">
+          <label>Fecha<input id="ev-fecha" type="date"></label>
+          <label>Número de personas<input id="ev-personas" type="number" inputmode="numeric" min="1" max="2000" placeholder="Ej. 40"></label>
+          <label class="ancho">Tipo de evento<select id="ev-tipo"><option>Bar o Bat Mitzvá</option><option>Cumpleaños</option><option>Reunión familiar</option><option>Evento de empresa</option><option>Otro</option></select></label>
+        </div>
+        <p class="resumen" id="ev-resumen" aria-live="polite">Pon la fecha y el número de personas.</p>
+        <a class="btn btn-wa" id="ev-enviar" href="#" target="_blank" rel="noopener" aria-disabled="true"><svg class="i"><use href="#i-wa"/></svg> Cotizar por WhatsApp</a>
+      </form>
+    </div>
+  </section>
+
+  <section id="sucursales" class="bloque">
+    <div class="cont">
+      <div class="titulo">
+        <div class="eti">Sucursales</div>
+        <h2>Tres sucursales para visitarnos</h2>
+        <p>Ven a comer, pasa por tu pedido o pídelo a domicilio desde la más cercana.</p>
+      </div>
+      <div class="sucs">
+        <article class="suc">
+          <div class="mapa"><iframe title="Mapa de la sucursal Polanco" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Moliere+340,+Polanco,+Ciudad+de+M%C3%A9xico&output=embed"></iframe></div>
+          <div class="info">
+            <h3>Polanco</h3>
+            <div class="dato"><svg class="i"><use href="#i-pin"/></svg><div><b>Moliere 340</b><br><span>Polanco, Ciudad de México</span></div></div>
+            <div class="dato"><svg class="i"><use href="#i-reloj"/></svg><div><b>Horario</b><br><span>Pregúntanos por WhatsApp</span></div></div>
+            <div class="acc"><a class="btn btn-claro" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quesadillas%20Sra.%20Ascencio%20Moliere%20340%20Polanco"><svg class="i"><use href="#i-pin"/></svg> Cómo llegar</a></div>
+          </div>
+        </article>
+        <article class="suc">
+          <div class="mapa"><iframe title="Mapa de la sucursal Tecamachalco" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Tecamachalco+67,+San+Miguel+Tecamachalco,+Naucalpan&output=embed"></iframe></div>
+          <div class="info">
+            <h3>Tecamachalco</h3>
+            <div class="dato"><svg class="i"><use href="#i-pin"/></svg><div><b>Tecamachalco 67-69</b><br><span>San Miguel Tecamachalco</span></div></div>
+            <div class="dato"><svg class="i"><use href="#i-reloj"/></svg><div><b>Horario</b><br><span>Pregúntanos por WhatsApp</span></div></div>
+            <div class="acc"><a class="btn btn-claro" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tecamachalco%2067%20San%20Miguel%20Tecamachalco"><svg class="i"><use href="#i-pin"/></svg> Cómo llegar</a></div>
+          </div>
+        </article>
+        <article class="suc">
+          <div class="mapa"><iframe title="Mapa de la sucursal Interlomas" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Plaza+Panorama,+Interlomas,+Huixquilucan&output=embed"></iframe></div>
+          <div class="info">
+            <h3>Interlomas <span class="nuevo">Desde 2025</span></h3>
+            <div class="dato"><svg class="i"><use href="#i-pin"/></svg><div><b>Plaza Panorama</b><br><span>Interlomas</span></div></div>
+            <div class="dato"><svg class="i"><use href="#i-reloj"/></svg><div><b>Horario</b><br><span>Pregúntanos por WhatsApp</span></div></div>
+            <div class="acc"><a class="btn btn-claro" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Plaza%20Panorama%20Interlomas"><svg class="i"><use href="#i-pin"/></svg> Cómo llegar</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cont">
+      <div class="cta">
+        <h2>¿Se te antojaron unas quesadillas?</h2>
+        <p>Escríbenos y te llevamos tu pedido a domicilio.</p>
+        <a class="btn" id="wa-cta" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg> Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="cont pie">
+    <span class="logo"><svg class="marca" viewBox="0 0 40 40" aria-hidden="true" style="width:30px;height:30px"><circle cx="20" cy="20" r="19" fill="#b4532a"/><path d="M8 24a12 12 0 0 1 24 0Z" fill="#f0b43c"/></svg><span class="txt"><small>Quesadillas</small><b style="font-size:19px">Sra. Ascencio</b></span></span>
+    <span>Kosher · Supervisión KMD · Lácteo · Polanco, Tecamachalco e Interlomas</span>
+    <span>Demo por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a></span>
+  </div>
+</footer>
+
+<a class="btn btn-wa flota" id="wa-flota" href="#" target="_blank" rel="noopener" aria-label="Escribir a Quesadillas Sra. Ascencio por WhatsApp"><svg class="i"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+  const WA = '525551613002';
+  const NOMBRE = 'Quesadillas Sra. Ascencio';
+  const liga = (t) => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+  const $ = (id) => document.getElementById(id);
+
+  ['wa-barra', 'wa-hero', 'wa-cta'].forEach((id) => { $(id).href = liga(`Hola ${NOMBRE}, quiero hacer un pedido a domicilio`); });
+  $('wa-flota').href = liga(`Hola ${NOMBRE}`);
+
+  const ART = { Quesadillas: 'las quesadillas', Sopes: 'los sopes', Enchiladas: 'las enchiladas', Tostadas: 'las tostadas', Tamales: 'los tamales', Antojitos: 'los antojitos' };
+  document.querySelectorAll('[data-pedir]').forEach((a) => {
+    a.href = liga(`Hola ${NOMBRE}, quiero preguntar por ${ART[a.dataset.pedir]}. ¿Qué tienen hoy y qué precio tienen?`);
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+
+  /* ---------- Pedido a domicilio ---------- */
+  const platillos = [
+    ['Quesadillas', 'Fritas, con crema y salsas'],
+    ['Sopes', 'Antojito de la casa'],
+    ['Enchiladas', 'Orden'],
+    ['Tostadas', 'Crujientes'],
+    ['Tamales', 'Pieza'],
+    ['Flautas', 'Orden'],
+  ];
+  const cant = platillos.map(() => 0);
+  const filas = $('filas');
+  filas.innerHTML = platillos.map(([n, d], i) => `
+    <div class="fila">
+      <div class="nom">${n}<small>${d}</small></div>
+      <div class="paso" role="group" aria-label="Cantidad de ${n}">
+        <button type="button" data-i="${i}" data-d="-1" aria-label="Quitar uno">−</button>
+        <output id="c${i}">0</output>
+        <button type="button" data-i="${i}" data-d="1" aria-label="Agregar uno">+</button>
+      </div>
+    </div>`).join('');
+
+  const enviar = $('enviar'), resumen = $('resumen');
+  const sucursal = $('sucursal'), cuando = $('cuando'), direccion = $('direccion'), lDir = $('l-dir');
+  const modo = () => document.querySelector('input[name="modo"]:checked').value;
+  const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
+
+  function pintar() {
+    const total = cant.reduce((a, b) => a + b, 0);
+    const tipos = cant.filter((c) => c > 0).length;
+    const dom = modo() === 'domicilio';
+    lDir.hidden = !dom;
+    resumen.textContent = total
+      ? `${plural(total, 'pieza', 'piezas')} de ${plural(tipos, 'platillo', 'platillos')} · ${dom ? 'a domicilio' : 'para recoger'}`
+      : 'Agrega al menos un platillo.';
+    const lineas = platillos.map(([n], i) => cant[i] ? `• ${cant[i]} × ${n}` : '').filter(Boolean);
+    const cabeza = dom
+      ? `Hola ${NOMBRE}, quiero un pedido a domicilio para ${cuando.value}:`
+      : `Hola ${NOMBRE}, quiero un pedido para recoger ${cuando.value}:`;
+    const extra = [`Sucursal: ${sucursal.value}`];
+    if (dom && direccion.value.trim()) extra.push(`Dirección: ${direccion.value.trim()}`);
+    const texto = [cabeza, ...lineas, ...extra, '¿Me confirman el total y la hora?'].join('\n');
+    enviar.href = liga(texto);
+    enviar.setAttribute('aria-disabled', total ? 'false' : 'true');
+  }
+
+  filas.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-i]');
+    if (!b) return;
+    const i = +b.dataset.i;
+    cant[i] = Math.max(0, Math.min(99, cant[i] + +b.dataset.d));
+    $('c' + i).textContent = cant[i];
+    pintar();
+  });
+  document.querySelectorAll('input[name="modo"]').forEach((r) => r.addEventListener('change', pintar));
+  [sucursal, cuando].forEach((el) => el.addEventListener('change', pintar));
+  direccion.addEventListener('input', pintar);
+  pintar();
+
+  /* ---------- Eventos ---------- */
+  const evFecha = $('ev-fecha'), evPers = $('ev-personas'), evTipo = $('ev-tipo');
+  const evEnviar = $('ev-enviar'), evRes = $('ev-resumen');
+  const hoy = new Date(); hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
+  evFecha.min = hoy.toISOString().slice(0, 10);
+  const fechaLarga = (iso) => {
+    const [y, m, d] = iso.split('-').map(Number);
+    return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  };
+  function pintarEvento() {
+    const f = evFecha.value, p = parseInt(evPers.value, 10);
+    const ok = Boolean(f) && p > 0;
+    evRes.textContent = ok ? `${evTipo.value} · ${fechaLarga(f)} · ${plural(p, 'persona', 'personas')}` : 'Pon la fecha y el número de personas.';
+    const texto = ok
+      ? [`Hola Ascencio Eventos, quiero cotizar un evento:`, `• Tipo: ${evTipo.value}`, `• Fecha: ${fechaLarga(f)}`, `• Personas: ${p}`, '¿Me mandan opciones?'].join('\n')
+      : '';
+    evEnviar.href = ok ? liga(texto) : '#';
+    evEnviar.setAttribute('aria-disabled', ok ? 'false' : 'true');
+  }
+  [evFecha, evPers].forEach((el) => el.addEventListener('input', pintarEvento));
+  evTipo.addEventListener('change', pintarEvento);
+  pintarEvento();
+</script>
+</body>
+</html>
